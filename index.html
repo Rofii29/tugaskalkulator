@@ -4,24 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kalkulator Sederhana</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   </head>
   <body>
-    <h1>Kalkulator Sederhana</h1>
-    <form onsubmit="return false;">
-      <input type="number" id="angka1" placeholder="Masukkan Angka Pertama" />
-      <select id="operator">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-        <option value="%">%</option>
-      </select>
-      <input type="number" id="angka2" placeholder="Masukkan Angka Kedua" />
-      <button onclick="hitung()">Hitung</button>
-      <br />
-      <br />
-      Hasil: <span id="hasil"></span>
-    </form>
+    <div class="absolute left-[600px] top-10 text-center">
+        <h1>Kalkulator Sederhana</h1>
+        <br>
+        <br>
+        <form onsubmit="return false;">
+          <input type="number" id="angka1" placeholder="Masukkan Angka 1" class="block p-2.5 w-500 z-10 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search" required />
+          <select id="operator" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-4 mb-8">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+          </select>
+          <input type="number" id="angka2" placeholder="Masukkan Angka 2" class="block p-2.5 w-500 z-5 text-sm text-gray-900 bg-gray-50 rounded-e-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search" required />
+          <button onclick="hitung()" class="mt-4 mb-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Hitung</button>
+          <br />
+          <br />
+          <div class="border-blue-500">
+            Hasil: <span  id="hasil" ></span>
+          </div>
+        
+        </form>
+    </div>
+    
     <script src="kalkulator.js"></script>
   </body>
 </html>
